@@ -8,7 +8,7 @@ import App from './App.vue';
         return{
              counter:0
         };
-    }
+    },
  })
 
 
