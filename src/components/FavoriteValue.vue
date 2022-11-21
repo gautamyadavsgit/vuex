@@ -1,5 +1,6 @@
 <template>
     <h3>{{ counter }}</h3>
+    <p>We do more.....</p>
   
 </template>
 
@@ -10,7 +11,7 @@
 export default{
     computed:{
    counter(){
-    return this.$store.getters.timesTwo;
+    return this.$store.getters.nomralizedCounter;
    }
   }
     
