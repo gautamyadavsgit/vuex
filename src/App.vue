@@ -21,7 +21,10 @@ export default {
   },
   methods: {
     addOne() {
-      this.$store.state.counter = this.$store.state.counter + 10;
+      this.$store.dispatch({
+        type:'increase',
+        value:10
+      });
     },
   },
 };

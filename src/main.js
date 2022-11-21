@@ -8,9 +8,27 @@ const store = createStore({
       counter: 0,
     };
   },
+  mutations:{
+   increment(state){
+  state.counter = state.counter + 2;
+   },
+   increase(state,payload){
+       state.counter = state.counter + payload.value;
+   }
+  },
+  actions:{
+    increment(context){
+        setTimeout(function(){
+          context.commit('increment');
+        },2000);
+    },
+    increase(context,payload){
+        context.commit('increase',payload);
+    }
+},
   getters: {
     timesTwo(state) {
-      return state.counter * 15;
+      return state.counter * 2;
     },
     nomralizedCounter(_, getters) {
       const finalCounter = getters.timesTwo;
@@ -22,6 +40,7 @@ const store = createStore({
       }
       return finalCounter;
     },
+
   },
 });
 
