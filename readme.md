@@ -1,0 +1,1 @@
+install vuex command  // npm install --save vuex@next // adding next for installing the latest version
