@@ -34,7 +34,9 @@ const store = createStore({
   },
   actions: {
     increase(context, payload) {
+      console.log(context);
       setTimeout(function () {
+        console.log(context);
         context.commit('increase', payload);
       }, 2000);
     },
