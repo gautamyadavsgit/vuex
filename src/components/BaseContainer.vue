@@ -1,15 +1,9 @@
 <template>
   <section>
-    <h2>{{ $store.state.counter }}</h2>
+    
     <slot></slot>
   </section>
 </template>
-
-<script>
-export default {
-  props: ['title'],
-};
-</script>
 
 <style scoped>
 section {

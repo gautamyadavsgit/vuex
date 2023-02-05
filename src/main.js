@@ -7,7 +7,7 @@ const app = createApp(App);
 const store = createStore({
    state(){
     return {
-        counter:2
+        counter:0
     }
    }
 });
