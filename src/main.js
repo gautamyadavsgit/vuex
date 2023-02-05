@@ -18,6 +18,27 @@ const store = createStore({
       state.counter = state.counter + payload.value;
     },
   },
+  getters: {
+    FinalCounter(state) {
+      return state.counter * 3;
+    },
+    NormalizedCounter(_, getters) {
+      if (getters.FinalCounter < 0) {
+        return 0;
+      }
+      if (getters.FinalCounter > 100) {
+        return 100;
+      }
+      return getters.FinalCounter;
+    },
+  },
+  actions: {
+    increase(context, payload) {
+      setTimeout(function () {
+        context.commit('increase', payload);
+      }, 2000);
+    },
+  },
 });
 app.use(store);
 app.mount('#app');
