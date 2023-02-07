@@ -1,13 +1,12 @@
 <template>
-  <h2>{{ counter }}</h2>
+  <h2>{{ FinalCounter }}</h2>
 </template>
 
 <script>
+import {mapGetters} from 'vuex';
 export default {
   computed: {
-    counter() {
-      return this.$store.getters.FinalCounter;
-    },
+    ...mapGetters(['FinalCounter']), // getting finalcounter getter with mappers
   },
 };
 </script>
